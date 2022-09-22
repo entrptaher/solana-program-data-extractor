@@ -6,10 +6,11 @@ async function main() {
   const connection = new Connection(process.env.RPC_URL);
 
   const resp = await connection.getParsedTransaction(
-    `3TvRQsxxiywMJLY1oCYe5HakvuXyz1kKfpnbuxYXFQg5z9vtzGfnjnkZ1xZCUDinefGADzFU3jrSzbGjqzPT5UP2`,
+    `4NRG7HjdweknnWpGL89sSXHX6ph7DrmuHvWB6KBtC8dAzhHsSR2mA6hEhsumBwVvfb7biYBVDJhb4yvcWuEBfdpd`,
     "confirmed"
   );
-
+  
+  console.log(JSON.stringify({resp}));
   const instruction = resp.transaction.message.instructions.find(
     (e) =>
       e.programId.toString() === "hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk"

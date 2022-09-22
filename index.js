@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
+
 exports.default = _default;
 
 var _bs = _interopRequireDefault(require("bs58"));
@@ -55,3 +56,5 @@ async function _default(args) {
     buyerPrice,
   };
 }
+
+module.exports = _default;
