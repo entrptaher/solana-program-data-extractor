@@ -29,6 +29,8 @@ async function _default(args) {
     if (!args[e]) throw new Error(`${e} is required`);
   });
 
+  const { programId, encodedData, connection } = args;
+
   if (!programs[programId]) {
     programs[programId] = await _anchor.Program.at(
       programId.toString(),
